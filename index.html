@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Mona</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#2e7d32">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 Mi Mona</h1>
+
+        <div class="resumen">
+
+            <h3>Ingresos</h3>
+            <p id="ingresos">$0</p>
+
+            <h3>Gastos</h3>
+            <p id="gastos">$0</p>
+
+            <h3>Balance</h3>
+            <p id="balance">$0</p>
+
+            <h3>Presupuesto Mensual</h3>
+
+            <input
+                type="number"
+                id="presupuesto"
+                placeholder="Ingrese presupuesto mensual">
+
+            <p id="disponible">
+                Disponible: $0
+            </p>
+
+        </div>
+
+        <form id="formulario">
+
+            <input
+                type="date"
+                id="fecha"
+                required>
+
+            <input
+                type="text"
+                id="descripcion"
+                placeholder="Descripción"
+                required>
+
+            <select id="tipo">
+                <option value="Ingreso">💰 Ingreso</option>
+                <option value="Gasto">💸 Gasto</option>
+            </select>
+
+            <select id="categoria">
+                <option value="Comida">🍔 Comida</option>
+                <option value="Transporte">🚗 Transporte</option>
+                <option value="Hogar">🏠 Hogar</option>
+                <option value="Salud">💊 Salud</option>
+                <option value="Entretenimiento">🎮 Entretenimiento</option>
+                <option value="Salario">💰 Salario</option>
+                <option value="Otros">📦 Otros</option>
+            </select>
+
+            <input
+                type="number"
+                id="valor"
+                placeholder="Valor"
+                required>
+
+            <button type="submit">
+                Guardar Movimiento
+            </button>
+
+        </form>
+
+        <div class="movimientos-header">
+
+            <h2>Movimientos</h2>
+
+            <button id="exportarExcel">
+                📄 Excel
+            </button>
+
+        </div>
+
+        <input
+            type="text"
+            id="buscar"
+            placeholder="🔍 Buscar movimiento">
+
+        <select id="filtro">
+            <option value="Todos">📋 Todos</option>
+            <option value="Ingreso">💰 Ingresos</option>
+            <option value="Gasto">💸 Gastos</option>
+        </select>
+
+        <ul id="lista"></ul>
+
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./sw.js")
+                .then(() => {
+                    console.log("Service Worker registrado correctamente");
+                })
+                .catch((error) => {
+                    console.log("Error al registrar Service Worker:", error);
+                });
+        }
+    </script>
+
+</body>
+
+</html>

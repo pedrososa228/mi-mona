@@ -1,0 +1,125 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    padding:10px;
+    margin:0;
+}
+
+.container{
+    max-width:400px;
+    margin:auto;
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#2e7d32;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.resumen{
+    background:#f8f9fa;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.resumen h3{
+    margin-top:10px;
+    margin-bottom:5px;
+    color:#333;
+}
+
+#ingresos{
+    color:#28a745;
+    font-size:24px;
+    font-weight:bold;
+}
+
+#gastos{
+    color:#dc3545;
+    font-size:24px;
+    font-weight:bold;
+}
+
+#balance{
+    color:#007bff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input,
+select,
+button{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+button{
+    background:#28a745;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#218838;
+}
+
+li{
+    list-style:none;
+    background:#f8f9fa;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:8px;
+    word-wrap:break-word;
+}
+
+h2{
+    margin-top:20px;
+}
+
+/* ===== MOVIMIENTOS + EXCEL ===== */
+
+.movimientos-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.movimientos-header h2{
+    margin:0;
+}
+
+#exportarExcel{
+    width:auto !important;
+    min-width:110px;
+    padding:8px 12px;
+    margin:0;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+#exportarExcel:hover{
+    background:#0056b3;
+}
